@@ -10,7 +10,7 @@ from .serializers import ProductSerializer, CartSerializer, CartItemSerializer
 
 class ProductList(APIView):
     def get(self, request):
-        data = Products.objects.all()
+        data = Product.objects.all()
         serializer = ProductSerializer(data, many=True)
         return Response(serializer.data)
       
