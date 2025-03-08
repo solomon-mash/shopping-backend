@@ -15,10 +15,11 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class CartItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
+    id = serializers.IntegerField()
 
     class Meta:
         model = CartItem
-        fields = ['product', 'quantity', 'total_price']
+        fields = ['id', 'product', 'quantity', 'total_price']
 
 class CartSerializer(serializers.ModelSerializer):
     items = CartItemSerializer(many=True, read_only=True)
