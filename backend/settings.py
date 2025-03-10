@@ -74,6 +74,7 @@ MIDDLEWARE = [
 # CORS allowed origins
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://shopping-app-solomon.vercel.app",
     "https://shopping-backend-ko0d.onrender.com",
 
 ]
@@ -99,15 +100,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': dj_database_url.config(
